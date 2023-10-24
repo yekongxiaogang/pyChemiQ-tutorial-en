@@ -1,0 +1,42 @@
+{% extends "!layout.html" %}
+{% block extrahead %}
+    <link href="{{ pathto("_static/mycss.css", True) }}" rel="stylesheet" type="text/css">
+{% endblock %}
+<div class="language-switcher">
+  
+ 
+<label for="lang-select">Select language: </label>
+  <select id="lang-select">
+    <option value="en">English</option>
+    
+    <
+
+   
+<option value="zh">Chinese</option>
+  </select>
+
+</
+</div>
+
+<script>
+  document.getElementById('lang
+
+  document.getElementById('
+
+  document.getElementById('lang-select').addEventListener('change', function() {
+    var lang = this.value;
+    var currentUrl = window.location.href;
+    var baseUrl = currentUrl.split('/').slice(0, -2).join('/');
+    var newUrl = baseUrl + '/' + lang + '/' + 'index.html
+
+  document.getElementById('lang-select').addEventListener('change', function() {
+    var lang = this.value;
+    var currentUrl = window.location.href;
+    var baseUrl = currentUrl.split('/').slice(0, -2).join('/');
+    var newUrl = baseUrl + '/' + lang + '/' + 'index.html';
+    window.location.href = newUrl;
+  });
+<button onclick="changeLanguage('en')">English</button>
+<button onclick="changeLanguage('zh')">中文</button>
+
+</script>
